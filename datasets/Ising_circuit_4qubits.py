@@ -9,8 +9,7 @@ def theta_k(h, n, k): #the only place where h comes in is theta which determines
 def B_dag(q0, q1, theta_k, n, h): # 
     qml.PauliX(wires = q1)
     qml.CNOT(wires = [q1, q0])
-    qml.adjoint(qml.CRX(-theta_k, wires = [q0, q1]))#Use -theta_k in the dag operation
-    #qml.adjoint(qml.ctrl(qml.RX, control = q0)(-theta_k, wires = q1)) 
+    qml.ctrl(qml.RX, control = q0)(-theta_k, wires = q1) #Use -theta_k in the dag operation
     qml.CNOT(wires = [q1, q0])
     qml.PauliX(wires = q1)   
 
