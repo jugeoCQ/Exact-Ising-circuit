@@ -1,9 +1,6 @@
 # Exact Ising Circuit
 
-This repo contains PennyLane code to create **exact eigenstates of the transverse-field Ising model** on a 4-qubit chain using a quantum circuit. The construction is based on the methods described in [Verstraete et al., 2008](https://arxiv.org/pdf/0804.1888) and [Cervera-Lierta, 2018](https://arxiv.org/abs/1807.07112). The circuit creates eigenstates of the following Hamiltonian. 
-
-H = - sum_i X_i X_{i+1} - h sum_i Z_i
-where X_i and Z_i are the Pauli matrices acting on qubit i, and h is the transverse field. 
+This repo contains PennyLane code to create **exact eigenstates of the transverse-field Ising model** on a 4-qubit chain using a quantum circuit. The construction is based on the methods described in [Verstraete et al., 2008](https://arxiv.org/pdf/0804.1888) and [Cervera-Lierta, 2018](https://arxiv.org/abs/1807.07112). 
 
 Note : for 4 qubits you can just do exact diagonalization to get the eigenstates and dont really need a circuit . But this is more fun. You can run it on quantum hardware and study the circuit in its own right.
 
